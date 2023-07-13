@@ -1,5 +1,165 @@
 <template>
   <div class="about">
     <h1>这是用来测试组件的测试页面</h1>
+    <!-- 按钮集合 -->
+    <section class="btn">
+      <h4>按钮集合:</h4>
+      <x-button :s=sa>小按钮</x-button>
+      <x-button :m=sa>中按钮</x-button>
+      <x-button :l=sa>大按钮</x-button>
+      <x-button :disabled=sa>禁用按钮</x-button>
+      <x-button :bd=sa>边框按钮</x-button>
+      <x-button :type=primary>主要按钮</x-button>
+      <x-button :type=success>成功按钮</x-button>
+      <x-button :type=warn>警告按钮</x-button>
+      <x-button :type=danger>危险按钮</x-button>
+      <x-button :o=sa>圆</x-button>
+      <x-button><x-icon icon="x-icon-shijian"></x-icon></x-button>
+    </section>
+    <!-- 图标集合 -->
+    <section class="iconBox">
+      <h4>图标集合：</h4>
+      <ul>
+        <li>
+          <x-icon icon="x-icon-shijian"></x-icon>
+          x-icon-shijian
+        </li>
+        <li>
+          <x-icon icon="x-icon-laba"></x-icon>
+          x-icon-laba
+        </li>
+        <li>
+          <x-icon icon="x-icon-taiji"></x-icon>
+          x-icon-taiji
+        </li>
+        <li>
+          <x-icon icon="x-icon-shubiao"></x-icon>
+          x-icon-shubiao
+        </li>
+        <li>
+          <x-icon icon="x-icon-caidan"></x-icon>
+          x-icon-caidan
+        </li>
+        <li>
+          <x-icon icon="x-icon-dingbu"></x-icon>
+          x-icon-dingbu
+        </li>
+        <li>
+          <x-icon icon="x-icon-shouji"></x-icon>
+          x-icon-shouji
+        </li>
+        <li>
+          <x-icon icon="x-icon-book-full"></x-icon>
+          x-icon-book-full
+        </li>
+        <li>
+          <x-icon icon="x-icon-home"></x-icon>
+          x-icon-home
+        </li>
+        <li>
+          <x-icon icon="x-icon-xinxi"></x-icon>
+          x-icon-xinxi
+        </li>
+        <li>
+          <x-icon icon="x-icon-win8"></x-icon>
+          x-icon-win8
+        </li>
+        <li>
+          <x-icon icon="x-icon-xiangxia"></x-icon>
+          x-icon-xiangxia
+        </li>
+        <li>
+          <x-icon icon="x-icon-xiangyou1"></x-icon>
+          x-icon-xiangyou1
+        </li>
+        <li>
+          <x-icon icon="x-icon-sousuo"></x-icon>
+          x-x-icon-sousuo
+        </li>
+        <li>
+          <x-icon icon="x-icon-sousuo1"></x-icon>
+          x-icon-sousuo1
+        </li>
+        <li>
+          <x-icon icon="x-icon-zhuti_tiaosepan"></x-icon>
+          x-icon-zhuti_tiaosepan
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
+<script>
+import XButton from '@/xdesign/button/XButton.vue'
+import XIcon from '@/xdesign/icon/XIcon.vue'
+
+export default {
+  name: 'AboutView',
+  data() {
+    return {
+      sa: true,
+      primary: "primary",
+      success: "success",
+      warn: "warn",
+      danger: "danger",
+    }
+  },
+  components: {
+    XButton,
+    XIcon
+  }
+}
+</script>
+
+<style lang="less" scoped>
+.about {
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+h4 {
+  margin: 5px;
+}
+
+section {
+  border: 1px solid rgba(132, 194, 69, 0.452);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.x-button {
+  margin: 0 10px;
+
+  .x-icon:hover {
+    color: #fff;
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 30px;
+    color: rgb(78, 78, 78);
+
+    &:nth-child(1+8n) {
+      margin-left: 0;
+    }
+
+    .x-icon {
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+  }
+}
+</style>

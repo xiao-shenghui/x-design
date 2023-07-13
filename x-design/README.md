@@ -1,24 +1,24 @@
 # x-design
 
-## Project setup
+## 安装项目依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 编译和本地服务器运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译和打包
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 整理和修复文件
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 自定义配置
+查看 [配置参考](https://cli.vuejs.org/config/).
