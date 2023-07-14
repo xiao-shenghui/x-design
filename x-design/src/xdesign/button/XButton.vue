@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-    name: 'xbutton',
+    name: 'XButton',
     props: {
         s: {
             default: false,
@@ -49,7 +49,7 @@ export default {
     padding: 10px 16px;
     border-radius: 10px;
     font-size: 16px;
-    background-color: rgb(132, 194, 69);
+    background-color: rgb(251, 114, 153);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -85,13 +85,13 @@ export default {
 
 .bd {
     background-color: transparent;
-    border: 1px solid rgb(132, 194, 69);
-    color: rgb(132, 194, 69);
+    border: 1px solid rgb(251, 114, 153);
+    color: rgb(251, 114, 153);
 }
 
 .primary {
     // 主要颜色
-    background-color: rgb(132, 194, 69);
+    background-color: rgb(251, 114, 153);
 }
 
 .success {

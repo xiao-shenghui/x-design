@@ -89,8 +89,9 @@
   </div>
 </template>
 <script>
-import XButton from '@/xdesign/button/XButton.vue'
-import XIcon from '@/xdesign/icon/XIcon.vue'
+// Vue.use了，不再需要引入
+// import XButton from '@/xdesign/button/XButton.vue'
+// import XIcon from '@/xdesign/icon/XIcon.vue'
 
 export default {
   name: 'AboutView',
@@ -102,11 +103,11 @@ export default {
       warn: "warn",
       danger: "danger",
     }
-  },
-  components: {
-    XButton,
-    XIcon
   }
+  // components: {
+  //   XButton,
+  //   XIcon
+  // }
 }
 </script>
 
@@ -122,7 +123,7 @@ h4 {
 }
 
 section {
-  border: 1px solid rgba(132, 194, 69, 0.452);
+  border: 1px solid rgb(251, 114, 153, 0.452);
   padding: 10px;
   border-radius: 10px;
   margin: 10px 0;
