@@ -52,6 +52,7 @@ export default {
     background-color: rgb(251, 114, 153);
     color: #fff;
     border: none;
+    transition: 0.3s;
     cursor: pointer;
 }
 

@@ -1,10 +1,12 @@
 import XButton from './button/XButton.vue'
 import XIcon from './icon/XIcon.vue'
+import XLink from './link/XLink.vue'
 
 // 将每个组件放入数据里面
 const components = [
     XButton,
-    XIcon
+    XIcon,
+    XLink
 ]
 // 使用install方法
 const install = (Vue) => {

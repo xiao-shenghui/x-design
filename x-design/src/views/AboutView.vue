@@ -86,6 +86,24 @@
         </li>
       </ul>
     </section>
+    <!-- 文字链接集合 -->
+    <section>
+      <h4>文字链接集合：</h4>
+      <x-link href="https://gitee.com/" target="_blank">默认链接</x-link>
+      <x-link type="primary">主要链接</x-link>
+      <x-link type="success">成功链接</x-link>
+      <x-link type="warn">警告链接</x-link>
+      <x-link type="danger">危险链接</x-link>
+      <x-link type="info">信息链接</x-link>
+      <br>
+      <h4>禁用链接集合：</h4>
+      <x-link disabled>默认链接</x-link>
+      <x-link type="primary" disabled>主要链接</x-link>
+      <x-link type="success" disabled>成功链接</x-link>
+      <x-link type="warn" disabled>警告链接</x-link>
+      <x-link type="danger" disabled>危险链接</x-link>
+      <x-link type="info" disabled>信息链接</x-link>
+    </section>
   </div>
 </template>
 <script>
@@ -118,9 +136,7 @@ export default {
   padding-top: 20px;
 }
 
-h4 {
-  margin: 5px;
-}
+
 
 section {
   border: 1px solid rgb(251, 114, 153, 0.452);
@@ -128,38 +144,46 @@ section {
   border-radius: 10px;
   margin: 10px 0;
   overflow: hidden;
-}
 
-.x-button {
-  margin: 0 10px;
-
-  .x-icon:hover {
-    color: #fff;
+  h4 {
+    margin: 10px;
   }
-}
 
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  width: 90%;
-  margin: 0 auto;
-  flex-wrap: wrap;
-
-  li {
+  ul {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 30px;
-    color: rgb(78, 78, 78);
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
 
-    &:nth-child(1+8n) {
-      margin-left: 0;
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px 30px;
+      color: rgb(78, 78, 78);
+
+      &:nth-child(1+8n) {
+        margin-left: 0;
+      }
+
+      .x-icon {
+        margin-bottom: 10px;
+        font-size: 30px;
+      }
     }
+  }
 
-    .x-icon {
-      margin-bottom: 10px;
-      font-size: 30px;
+  .x-link {
+    margin-left: 20px;
+  }
+
+  .x-button {
+    margin: 0 10px;
+
+    .x-icon:hover {
+      color: #fff;
     }
   }
 }
