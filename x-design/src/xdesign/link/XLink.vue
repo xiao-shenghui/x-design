@@ -1,5 +1,7 @@
 <template>
-    <a class="x-link" :href="href" :type="type" ref="link" :class="{ disabled: disabled }" :target="target">
+    <a class="x-link" :href="href" :type="type" ref="link" :class="{ disabled: disabled, nounderline: nounderline }"
+        :icon="icon" :target="target">
+        <x-icon v-if="icon.length > 6" :icon="icon" />
         <slot></slot>
     </a>
 </template>
@@ -21,6 +23,14 @@ export default {
         },
         target: {
             default: "_self",
+            type: String
+        },
+        nounderline: {
+            default: false,
+            type: Boolean
+        },
+        icon: {
+            default: "",
             type: String
         }
     },
@@ -97,6 +107,11 @@ export default {
 
     &:hover {
         opacity: 0.3;
+        text-decoration: none;
     }
+}
+
+.nounderline:hover {
+    text-decoration: none;
 }
 </style>

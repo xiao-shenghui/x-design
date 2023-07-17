@@ -27,6 +27,7 @@ export default {
     color: rgb(78, 78, 78);
     cursor: pointer;
     transition: 0.3s;
+    padding: 0 2px;
 }
 
 .x-icon:hover {

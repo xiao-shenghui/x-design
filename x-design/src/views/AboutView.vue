@@ -21,67 +21,67 @@
       <h4>图标集合：</h4>
       <ul>
         <li>
-          <x-icon icon="x-icon-shijian"></x-icon>
+          <x-icon icon="x-icon-shijian" />
           x-icon-shijian
         </li>
         <li>
-          <x-icon icon="x-icon-laba"></x-icon>
+          <x-icon icon="x-icon-laba" />
           x-icon-laba
         </li>
         <li>
-          <x-icon icon="x-icon-taiji"></x-icon>
+          <x-icon icon="x-icon-taiji" />
           x-icon-taiji
         </li>
         <li>
-          <x-icon icon="x-icon-shubiao"></x-icon>
+          <x-icon icon="x-icon-shubiao" />
           x-icon-shubiao
         </li>
         <li>
-          <x-icon icon="x-icon-caidan"></x-icon>
+          <x-icon icon="x-icon-caidan" />
           x-icon-caidan
         </li>
         <li>
-          <x-icon icon="x-icon-dingbu"></x-icon>
+          <x-icon icon="x-icon-dingbu" />
           x-icon-dingbu
         </li>
         <li>
-          <x-icon icon="x-icon-shouji"></x-icon>
+          <x-icon icon="x-icon-shouji" />
           x-icon-shouji
         </li>
         <li>
-          <x-icon icon="x-icon-book-full"></x-icon>
+          <x-icon icon="x-icon-book-full" />
           x-icon-book-full
         </li>
         <li>
-          <x-icon icon="x-icon-home"></x-icon>
+          <x-icon icon="x-icon-home" />
           x-icon-home
         </li>
         <li>
-          <x-icon icon="x-icon-xinxi"></x-icon>
+          <x-icon icon="x-icon-xinxi" />
           x-icon-xinxi
         </li>
         <li>
-          <x-icon icon="x-icon-win8"></x-icon>
+          <x-icon icon="x-icon-win8" />
           x-icon-win8
         </li>
         <li>
-          <x-icon icon="x-icon-xiangxia"></x-icon>
+          <x-icon icon="x-icon-xiangxia" />
           x-icon-xiangxia
         </li>
         <li>
-          <x-icon icon="x-icon-xiangyou1"></x-icon>
+          <x-icon icon="x-icon-xiangyou1" />
           x-icon-xiangyou1
         </li>
         <li>
-          <x-icon icon="x-icon-sousuo"></x-icon>
+          <x-icon icon="x-icon-sousuo" />
           x-x-icon-sousuo
         </li>
         <li>
-          <x-icon icon="x-icon-sousuo1"></x-icon>
+          <x-icon icon="x-icon-sousuo1" />
           x-icon-sousuo1
         </li>
         <li>
-          <x-icon icon="x-icon-zhuti_tiaosepan"></x-icon>
+          <x-icon icon="x-icon-zhuti_tiaosepan" />
           x-icon-zhuti_tiaosepan
         </li>
       </ul>
@@ -103,6 +103,12 @@
       <x-link type="warn" disabled>警告链接</x-link>
       <x-link type="danger" disabled>危险链接</x-link>
       <x-link type="info" disabled>信息链接</x-link>
+      <h4>有/无下划线链接：</h4>
+      <x-link nounderline>无下划线链接</x-link>
+      <x-link>有下划线链接</x-link>
+      <h4>带图标的文字链接：</h4>
+      <x-link icon="x-icon-sousuo">搜索</x-link>
+      <x-link>首页<x-icon icon="x-icon-home" /></x-link>
     </section>
   </div>
 </template>
