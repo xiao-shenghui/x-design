@@ -110,6 +110,30 @@
       <x-link icon="x-icon-sousuo">搜索</x-link>
       <x-link>首页<x-icon icon="x-icon-home" /></x-link>
     </section>
+    <!-- 布局Layout集合 -->
+    <section>
+      <h1>Row容器</h1>
+      <label>普通Row容器</label>
+      <x-row>普通row容器</x-row>
+      <label>带flex布局 row容器</label>
+      <x-row :gutter="20" type="flex">
+        <div>块标签1</div>
+        <div>块标签2</div>
+        <div>块标签3</div>
+      </x-row>
+      <label>flex布局，弹性布局控制</label>
+      <x-row :gutter="20" type="flex" justify="space-between">
+        <div>带flex布局 块标签1</div>
+        <div>带flex布局 块标签2</div>
+        <div>带flex布局 块标签3</div>
+      </x-row>
+      <label>flex布局，垂直方向布局控制</label>
+      <x-row :gutter="20" type="flex" direction="column" aligns="center">
+        <div>带flex布局 块标签1</div>
+        <div>带flex布局 块标签2</div>
+        <div>带flex布局 块标签3</div>
+      </x-row>
+    </section>
   </div>
 </template>
 <script>
@@ -150,6 +174,9 @@ section {
   border-radius: 10px;
   margin: 10px 0;
   overflow: hidden;
+  label{
+    color: rgb(251, 114, 153);
+  }
 
   h4 {
     margin: 10px;
@@ -191,6 +218,12 @@ section {
     .x-icon:hover {
       color: #fff;
     }
+  }
+
+  .x-row {
+    margin: 10px;
+    background-color: #eee;
+    padding: 10px;
   }
 }
 </style>
