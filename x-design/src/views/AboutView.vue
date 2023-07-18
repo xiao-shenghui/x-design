@@ -133,6 +133,18 @@
         <div>带flex布局 块标签2</div>
         <div>带flex布局 块标签3</div>
       </x-row>
+      <h1>Col容器</h1>
+      <label>flex容器下，4：4：4</label>
+      <x-row :gutter="20" type="flex">
+        <x-col :span="4">块标签1</x-col>
+        <x-col :span="4">块标签1</x-col>
+        <x-col :span="4">块标签1</x-col>
+      </x-row>
+      <label>flex容器下，带偏移，4：2：4</label>
+      <x-row :gutter="20" type="flex">
+        <x-col :span="4">块标签1</x-col>
+        <x-col :span="2" :offset="4">块标签1</x-col>
+      </x-row>
     </section>
   </div>
 </template>
@@ -174,7 +186,8 @@ section {
   border-radius: 10px;
   margin: 10px 0;
   overflow: hidden;
-  label{
+
+  label {
     color: rgb(251, 114, 153);
   }
 

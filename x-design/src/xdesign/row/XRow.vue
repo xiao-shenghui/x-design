@@ -7,8 +7,8 @@ export default {
             type: String
         },
         gutter: {
-            default: "",
-            type: String
+            default: 0,
+            type: Number
         },
         type: {
             default: "",
@@ -49,6 +49,13 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+// 清除浮动带来的影响
+.x-row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .x-row-flex {
     display: flex;
 }
