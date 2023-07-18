@@ -9,6 +9,24 @@
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
+  <style>
+    body {
+      overflow-y: scroll;
+      /*设置垂直滚动条可见*/
+      scroll-behavior: smooth;
+      /*设置平滑滚动*/
+    }
+
+    ::-webkit-scrollbar {
+      /* width: 0px; */
+      display: none;
+      /*隐藏滚动条*/
+    }
+
+    /* body:hover::-webkit-scrollbar-thumb{
+background-color: #ccc; /*设置滚动条颜色*/
+    /* } */
+  </style>
 </head>
 
 <body>
