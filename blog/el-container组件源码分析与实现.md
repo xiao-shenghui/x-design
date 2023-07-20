@@ -35,8 +35,8 @@
 </el-container>
 ```
 
-- el-container: 当子元素中包含 <el-header> 或 <el-footer> 时，全部子元素会垂直上下排列，否则会水平左右排列。(联想到flex布局，问题是如何判断子元素？)
-- el的解释：<el-container> 的子元素只能是后四者，后四者的父元素也只能是 <el-container>(如何遍历判断所有子元素？)
+- el-container: 当子元素中包含 `<el-header>` 或 `<el-footer>` 时，全部子元素会垂直上下排列，否则会水平左右排列。(联想到`flex`布局，问题是如何判断子元素？)
+- el的解释：`<el-container> `的子元素只能是后四者，后四者的父元素也只能是 `<el-container>`(如何遍历判断所有子元素？)
 - el-container: 有`direction`,提供两个可选值`horizontal / vertical`，子元素中有 `el-header` 或 `el-footer` 时为 vertical，否则为 horizontal
 - el-aside: 有`width`属性，用于指定侧边栏的宽度。
 - el-header: 有`height`属性，用于指定底部栏的高度。
@@ -49,4 +49,4 @@
 
 ### 查看源码
 
-2023-07-20 20:58 待更新......
+2023-07-20 21:01 待更新......
