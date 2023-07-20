@@ -40,6 +40,7 @@ export default {
                 }
                 else {
                     // span
+                    console.log('传输了span');
                     classList.push(`x-col-${this[prop]}`);
                 }
             }
@@ -47,7 +48,7 @@ export default {
         return h(
             this.tag,
             {
-                class: ['x-col', { classList: classList }],
+                class: ['x-col', classList ? classList : ''],
                 style: style
             },
             this.$slots.default
@@ -117,54 +118,54 @@ export default {
 }
 
 .x-col-offset-0 {
-    left: calc(0 * var(--w));
+    margin-left: calc(0 * var(--w));
 }
 
 .x-col-offset-1 {
-    left: calc(1 * var(--w));
+    margin-left: calc(1 * var(--w));
 }
 
 .x-col-offset-2 {
-    left: calc(2 * var(--w));
+    margin-left: calc(2 * var(--w));
 }
 
 .x-col-offset-3 {
-    left: calc(3 * var(--w));
+    margin-left: calc(3 * var(--w));
 }
 
 .x-col-offset-4 {
-    left: calc(4 * var(--w));
+    margin-left: calc(4 * var(--w));
 }
 
 .x-col-offset-5 {
-    left: calc(5 * var(--w));
+    margin-left: calc(5 * var(--w));
 }
 
 .x-col-offset-6 {
-    left: calc(6 * var(--w));
+    margin-left: calc(6 * var(--w));
 }
 
 .x-col-offset-7 {
-    left: calc(7 * var(--w));
+    margin-left: calc(7 * var(--w));
 }
 
 .x-col-offset-8 {
-    left: calc(8 * var(--w));
+    margin-left: calc(8 * var(--w));
 }
 
 .x-col-offset-9 {
-    left: calc(9 * var(--w));
+    margin-left: calc(9 * var(--w));
 }
 
 .x-col-offset-10 {
-    left: calc(10 * var(--w));
+    margin-left: calc(10 * var(--w));
 }
 
 .x-col-offset-11 {
-    left: calc(11 * var(--w));
+    margin-left: calc(11 * var(--w));
 }
 
 .x-col-offset-12 {
-    left: calc(12 * var(--w));
+    margin-left: calc(12 * var(--w));
 }
 </style>
