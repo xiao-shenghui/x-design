@@ -145,6 +145,32 @@
         <x-col :span="4">块标签1</x-col>
         <x-col :span="2" :offset="4">块标签1</x-col>
       </x-row>
+      <h1>Container容器</h1>
+      <label>Container容器，上/中/下布局</label>
+      <x-container>
+        <x-header>我是头部</x-header>
+        <x-main>我是中间部分</x-main>
+        <x-footer>我是底部</x-footer>
+      </x-container>
+      <label>Container容器，上/左右/下布局</label>
+      <x-container>
+        <x-header>我是头部</x-header>
+        <x-container>
+          <x-aside width="400px">我是侧边栏</x-aside>
+          <x-main>我是主要部分</x-main>
+        </x-container>
+        <x-footer>我是底部</x-footer>
+      </x-container>
+      <label>Container容器，上/左右左/下布局</label>
+      <x-container>
+        <x-header>我是头部</x-header>
+        <x-container>
+          <x-aside width="400px">我是侧边栏</x-aside>
+          <x-main>我是主要部分</x-main>
+          <x-aside width="400px">我是侧边栏</x-aside>
+        </x-container>
+        <x-footer>我是底部</x-footer>
+      </x-container>
     </section>
   </div>
 </template>
@@ -237,6 +263,25 @@ section {
     margin: 10px;
     background-color: #eee;
     padding: 10px;
+  }
+
+  .x-header,
+  .x-footer {
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .x-main {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    background-color: rgb(158, 158, 158);
+  }
+
+  .x-aside {
+    text-align: center;
+    line-height: 200px;
+    background-color: rgb(165, 142, 142);
   }
 }
 </style>

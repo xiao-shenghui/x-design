@@ -1,0 +1,16 @@
+@import url(public.css);
+.x-header {
+  background-color: var(--bg);
+}
+.x-footer {
+  background-color: var(--bg);
+}
+.x-main {
+  flex: 1;
+  flex-basis: auto;
+  background-color: var(--bg);
+}
+.x-aside {
+  flex-basis: auto;
+  background-color: var(--bg);
+}

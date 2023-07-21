@@ -13,6 +13,7 @@
   --s: 12px;
   --m: 16px;
   --l: 30px;
+  --bg: #eeeeee;
 }
 .disabled {
   opacity: 0.3;
