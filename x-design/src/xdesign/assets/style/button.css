@@ -1,0 +1,50 @@
+@import url('public.css');
+.x-button {
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-size: var(--m);
+  background-color: var(--main);
+  color: #fff;
+  border: none;
+  transition: var(--time);
+  cursor: pointer;
+}
+.s {
+  padding: 5px;
+  border-radius: var(--radius);
+  font-size: var(--s);
+}
+.m {
+  padding: 10px;
+  border-radius: var(--radius);
+  font-size: var(--m);
+}
+.l {
+  padding: 20px;
+  border-radius: var(--radius);
+  font-size: var(--l);
+}
+.o {
+  padding: 10px;
+  border-radius: var(--oradius);
+}
+.bd {
+  background-color: transparent;
+  border: 1px solid var(--main);
+  color: var(--main);
+}
+.primary {
+  background-color: var(--main);
+}
+.success {
+  background-color: var(--success);
+}
+.info {
+  background-color: var(--info);
+}
+.warn {
+  background-color: var(--warn);
+}
+.danger {
+  background-color: var(--danger);
+}

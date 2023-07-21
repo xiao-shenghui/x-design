@@ -1,0 +1,10 @@
+@import url('public.css');
+.x-icon {
+  color: var(--info);
+  cursor: pointer;
+  transition: var(--time);
+  padding: 0 2px;
+}
+.x-icon:hover {
+  color: var(--main);
+}

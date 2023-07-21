@@ -1,0 +1,43 @@
+.x-link {
+  color: var(--bmain);
+  text-decoration: none;
+  transition: var(--time);
+}
+.x-link:hover {
+  opacity: 0.8;
+  color: var(--main);
+  text-decoration: underline;
+}
+.primary {
+  color: var(--main);
+}
+.primary:hover {
+  color: var(--main);
+}
+.success {
+  color: var(--success);
+}
+.success:hover {
+  color: var(--success);
+}
+.info {
+  color: var(--info);
+}
+.info:hover {
+  color: var(--info);
+}
+.warn {
+  color: var(--warn);
+}
+.warn:hover {
+  color: var(--warn);
+}
+.danger {
+  color: var(--danger);
+}
+.danger:hover {
+  color: var(--danger);
+}
+.nounderline:hover {
+  text-decoration: none;
+}

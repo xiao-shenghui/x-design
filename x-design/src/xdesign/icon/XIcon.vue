@@ -2,7 +2,8 @@
     <i class="x-icon" :icon=icon ref="i"></i>
 </template>
 <script>
-import '../css/aliIcon/iconfont.css'
+// import '../css/aliIcon/iconfont.css'
+import '../assets/aliIcon/iconfont.css'
 export default {
     name: 'XIcon',
     props: {
@@ -23,14 +24,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.x-icon {
-    color: rgb(78, 78, 78);
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 0 2px;
-}
-
-.x-icon:hover {
-    color: rgb(251, 114, 153);
-}
+@import '../assets//style/icon.less';
 </style>

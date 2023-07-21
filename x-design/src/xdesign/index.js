@@ -1,8 +1,8 @@
 import XButton from './button/XButton.vue'
+import XCol from './col/XCol.vue'
 import XIcon from './icon/XIcon.vue'
 import XLink from './link/XLink.vue'
 import XRow from './row/XRow.vue'
-import XCol from './col/XCol.vue'
 
 // 将每个组件放入数据里面
 const components = [

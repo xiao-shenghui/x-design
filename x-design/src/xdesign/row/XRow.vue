@@ -49,50 +49,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-// 清除浮动带来的影响
-.x-row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.x-row-flex {
-    display: flex;
-}
-
-.x-row-flex-column {
-    flex-direction: column;
-}
-
-.x-row-justify-center {
-    justify-content: center;
-}
-
-.x-row-justify-space-between {
-    justify-content: space-between;
-}
-
-.x-row-justify-flex-end {
-    justify-content: flex-end;
-}
-
-.x-row-justify-space-around {
-    justify-content: space-around;
-}
-
-.x-row-align-center {
-    align-items: center;
-}
-
-.x-row-align-flex-end {
-    align-items: flex-end;
-}
-
-.x-row-align-baseline {
-    align-items: baseline;
-}
-
-.x-row-align-stretch {
-    align-items: stretch;
-}
+@import '../assets/style/row.less';
 </style>
