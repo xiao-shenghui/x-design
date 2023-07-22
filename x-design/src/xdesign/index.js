@@ -8,6 +8,7 @@ import XFooter from './footer/XFooter.vue'
 import XMain from './main/XMain.vue'
 import XContainer from './container/XContainer.vue'
 import XAside from './aside/XAside.vue'
+import XRadio from './radio/XRadio.vue'
 
 // 将每个组件放入数据里面
 const components = [
@@ -20,7 +21,8 @@ const components = [
     XFooter,
     XMain,
     XContainer,
-    XAside
+    XAside,
+    XRadio
 ]
 // 使用install方法
 const install = (Vue) => {

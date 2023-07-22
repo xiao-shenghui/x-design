@@ -172,6 +172,14 @@
         <x-footer>我是底部</x-footer>
       </x-container>
     </section>
+    <!-- Form表单集合 -->
+    <section>
+      <h1>Form表单集合</h1>
+      <h1>Radio单选按钮</h1>
+      <label>基础按钮</label>
+      <x-radio v-model="value" label="1">备选项</x-radio>
+      <x-radio v-model="value" label="2">备选项</x-radio>
+    </section>
   </div>
 </template>
 <script>
@@ -188,6 +196,7 @@ export default {
       success: "success",
       warn: "warn",
       danger: "danger",
+      value: '2'
     }
   }
   // components: {
