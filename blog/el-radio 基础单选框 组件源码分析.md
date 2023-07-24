@@ -1,6 +1,6 @@
 ## el-radio 单选框 组件源码分析
 
-> 涉及：基础单选框，element-ui中dispatch和broadcast的封装和实现，vue-nextTick()函数的使用。
+> 涉及：基础单选框，element-ui中dispatch和broadcast的封装和实现，vue中$nextTick()函数的使用。
 
 ### 基础用法
 
@@ -124,7 +124,6 @@ export default {
 - script
 
 ```javascript
-// vue执行完渲染后会执行this.nextTick()里面的callback函数。
 import Emitter from 'element-ui/src/mixins/emitter';
 
 export default {
@@ -138,7 +137,6 @@ export default {
     elForm: {
       default: ''
     },
-
     elFormItem: {
       default: ''
     }
@@ -218,6 +216,7 @@ export default {
 
   methods: {
     handleChange() {
+      //vue执行完渲染后会执行this.$nextTick()里面的callback函数。
       this.$nextTick(() => {
         this.$emit('change', this.model);
         this.isGroup && this.dispatch('ElRadioGroup', 'handleChange', this.model);
