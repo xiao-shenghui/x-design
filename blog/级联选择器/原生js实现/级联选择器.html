@@ -1,0 +1,120 @@
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		min-width: 100vw;
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	select{
+		outline: none;
+		min-width: 200px;
+		height: 40px;
+		border: 1px solid rgb(220, 223, 230);
+		border-radius: 6px;
+		padding: 0 10px;
+		color: #aaa;
+		transition: 0.5s;
+	}
+	select:focus{
+		border-color: rgb(64, 158, 255);
+	}
+	option{
+		font-size: 16px;
+		/*	option很多样式不生效，建议模拟下拉框*/
+	}
+</style>
+<body>
+	<div class="container">
+		<select name='province'>
+			<option value="请选择" disabled selected>请选择</option>
+		</select>
+		<select name='city'>
+			<option value="请选择" disabled selected>请选择</option>
+		</select>
+		<select name='country'>
+			<option value="请选择" disabled selected>请选择</option>
+		</select>
+	</div>
+
+</body>
+
+<script src="../data.js"></script>
+<script>
+	(function(){
+		let province = document.querySelector('[name="province"]');
+		let city = document.querySelector('[name="city"]');
+		let country = document.querySelector('[name="country"]');
+		
+		// 需求：顾客选择对应的省份，动态生成对应的市区，然后根据顾客选择对应的市区，动态生成对应的县城。
+
+		// 默认加载时，渲染第一级别
+		render(data,province);
+
+		// 根据用户的选择，渲染第二级别
+		province.addEventListener("change",(e) => { Cascader(e, 1, city,country) });
+		// 根据用户的选择，渲染第三级别
+		city.addEventListener("click",(e) => { Cascader(e, 2, country) });
+
+
+		// 封装渲染页面的函数
+		// 封装渲染函数，用于挂载数据
+		// ## resource ## 源数据
+		// ## targetNode ## 挂载的目标节点
+		function render(resource, targetNode){
+			// create(val,province)
+			for(let obj of resource){
+				create(obj.value,targetNode);
+			}
+		}
+
+		// 封装创建节点并挂载的方法
+		// ## val ## value和textContent值;
+		// ## targetNode ## 挂载到目标节点下面
+		function create(val,targetNode){
+			let option = document.createElement('option');
+			option.value = val;
+			option.textContent = val;
+			targetNode.append(option);
+		}
+
+		// 封装创建清空节点数据的方法
+		// ## targetNode ## 要清空数据的节点
+		function clear(targetNode){
+			targetNode.innerHTML = '<option value="请选择" disabled selected>请选择</option>'
+		}
+
+
+		// 根据级联的遍历和渲染函数
+		//level表示渲染级别
+		function Cascader(e, level, ...targetNodes){
+			// 首先清空数据
+			// clear(targetNode);
+			for(let node of targetNodes){
+				clear(node);
+			}
+			// 根据level，走正确的逻辑。
+			for(let obj of data){
+				switch(level){
+					case 1 :
+						obj.value == e.target.value ? render(obj.children, city) : console.log(0);
+						break;
+					case 2 :
+						for(let objChild of obj.children){
+							objChild.value == e.target.value ? render(objChild.children, country) : console.log(0);
+						}
+						break;
+					default: 
+						alert("请输入正确的level");
+				}
+			}
+		}
+	})();
+
+
+</script>
